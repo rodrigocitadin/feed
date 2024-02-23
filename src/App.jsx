@@ -1,6 +1,16 @@
+import Idk from "./Idk"
+
 function App() {
   return (
-    <h1>IDK</h1>
+    <>
+      <Idk />
+      <Idk />
+      <Idk />
+      <Idk />
+      <Idk />
+      <Idk />
+      <Idk />
+    </>
   )
 }
 
