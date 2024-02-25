@@ -5,8 +5,6 @@ export default function Header() {
   return (
     <header className={style.header}>
       <img 
-        width={64}
-        height={64} 
         src={feedLogo} 
         alt="Feed logo"
       />
