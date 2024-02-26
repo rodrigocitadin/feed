@@ -1,3 +1,4 @@
+import { PencilSimpleLine } from 'phosphor-react'
 import styles from './SideBar.module.css'
 
 export default function SideBar() {
@@ -14,6 +15,7 @@ export default function SideBar() {
       </div>
       <footer>
         <a href='#'>
+          <PencilSimpleLine width={20} weight="bold" />
           Edit Profile
         </a>
       </footer>
