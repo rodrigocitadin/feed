@@ -26,6 +26,12 @@ export default function Post() {
         <p><a href="#">see more...</a></p>
         <p><a href="#">#sla #idk #nsei</a></p>
       </div>
+
+      <form className={styles.commentForm}>
+        <strong>Leave a comment</strong>
+        <textarea placeholder='Write here...' />
+        <button type="submit">Send</button>
+      </form>
     </article>
   )
 }
