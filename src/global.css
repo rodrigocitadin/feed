@@ -13,6 +13,11 @@
   --blue-200: #80DDFF;
 }
 
+:focus {
+  outline: transparent;
+  box-shadow: 0 0 0 2px var(--blue-400);
+}
+
 * {
   margin: 0;
   padding: 0;
