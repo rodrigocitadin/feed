@@ -30,7 +30,9 @@ export default function Post() {
       <form className={styles.commentForm}>
         <strong>Leave a comment</strong>
         <textarea placeholder='Write here...' />
-        <button type="submit">Send</button>
+        <footer>
+          <button type="submit">Send</button>
+        </footer>
       </form>
     </article>
   )
