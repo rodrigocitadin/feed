@@ -17,13 +17,6 @@
   align-items: center;
 }
 
-.profile img {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 8px;
-  border: 4px solid var(--gray-800);
-}
-
 .profile strong {
   margin-top: 1rem;
   color: var(--gray-100);
