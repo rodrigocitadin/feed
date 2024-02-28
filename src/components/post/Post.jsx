@@ -20,17 +20,14 @@ export default function Post({ author, content, publishedAt }) {
             <span>{author.role}</span>
           </div>
         </div>
-        <time title={timeTitle} datetime="">{relativeDate}</time>
+        <time title={timeTitle} datetime={publishedAt.toISOString()}>{relativeDate}</time>
       </header>
       <div className={styles.content}>
-        <p>
-          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
-        </p>
-        <p><a href="#">see more...</a></p>
-        <p><a href="#">#sla #idk #nsei</a></p>
+        {content.map(line => {
+          return line.type === 'p'
+            ? <p>{line.content}</p>
+            : <p><a href="#">{line.content}</a></p>
+        })}
       </div>
 
       <form className={styles.commentForm}>
