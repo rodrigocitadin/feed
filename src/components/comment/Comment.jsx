@@ -1,13 +1,14 @@
 import { ThumbsUp, TrashSimple } from "phosphor-react";
+import styles from "./Comment.module.css";
 
 export default function Comment() {
   return (
-    <div>
+    <div className={styles.comment}>
       <img src="https://github.com/rodrigocitadin.png" />
-      <div>
-        <div>
+      <div className={styles.commentBox}>
+        <div className={styles.commentContent}>
           <header>
-            <div>
+            <div className={styles.authorAndTime}>
               <strong>Rodrigo Citadin</strong>
               <time datetime="">1h ago</time>
             </div>
