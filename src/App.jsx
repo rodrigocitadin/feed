@@ -31,7 +31,7 @@ const posts = [
       { type: "p", content: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat." },
       { type: "p", content: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat." },
     ],
-    publishedAt: new Date('2024-02-27 21:31:00')
+    publishedAt: new Date('2024-02-26 21:31:00')
   },
 ]
 

@@ -1,8 +1,12 @@
+import { format, formatDistanceToNow } from "date-fns"
 import Avatar from '../avatar/Avatar'
 import Comment from '../comment/Comment'
 import styles from './Post.module.css'
 
 export default function Post({ author, content, publishedAt }) {
+  const timeTitle = format(publishedAt, "do MMMM y 'at' HH:mm'h'")
+  const relativeDate = formatDistanceToNow(publishedAt, { addSuffix: true })
+
   return (
     <article className={styles.post}>
       <header>
@@ -12,11 +16,11 @@ export default function Post({ author, content, publishedAt }) {
             src={author.avatarUrl}
           />
           <div className={styles.authorInfo}>
-            <strong>Rodrigo Citadin</strong>
-            <span>Software Engineer</span>
+            <strong>{author.name}</strong>
+            <span>{author.role}</span>
           </div>
         </div>
-        <time datetime="">Published 1h ago</time>
+        <time title={timeTitle} datetime="">{relativeDate}</time>
       </header>
       <div className={styles.content}>
         <p>
