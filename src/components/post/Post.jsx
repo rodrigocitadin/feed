@@ -2,14 +2,14 @@ import Avatar from '../avatar/Avatar'
 import Comment from '../comment/Comment'
 import styles from './Post.module.css'
 
-export default function Post() {
+export default function Post({ author, content, publishedAt }) {
   return (
     <article className={styles.post}>
       <header>
         <div className={styles.author}>
           <Avatar
             size="5rem"
-            src="https://github.com/rodrigocitadin.png"
+            src={author.avatarUrl}
           />
           <div className={styles.authorInfo}>
             <strong>Rodrigo Citadin</strong>
@@ -38,9 +38,9 @@ export default function Post() {
       </form>
 
       <div className={styles.commentList}>
-        <Comment/>
-        <Comment/>
-        <Comment/>
+        <Comment />
+        <Comment />
+        <Comment />
       </div>
     </article>
   )
