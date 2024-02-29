@@ -22,8 +22,6 @@ export default function Post({ author, content, publishedAt }) {
     setNewComment(event.target.value)
   }
 
-
-
   return (
     <article className={styles.post}>
       <header>
@@ -37,13 +35,13 @@ export default function Post({ author, content, publishedAt }) {
             <span>{author.role}</span>
           </div>
         </div>
-        <time title={timeTitle} datetime={publishedAt.toISOString()}>{relativeDate}</time>
+        <time title={timeTitle} dateTime={publishedAt.toISOString()}>{relativeDate}</time>
       </header>
       <div className={styles.content}>
-        {content.map(line => {
+        {content.map((line, i) => {
           return line.type === 'p'
-            ? <p>{line.content}</p>
-            : <p><a href="#">{line.content}</a></p>
+            ? <p key={i}>{line.content}</p>
+            : <p key={i}><a href="#">{line.content}</a></p>
         })}
       </div>
 
