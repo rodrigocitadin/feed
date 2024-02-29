@@ -22,8 +22,9 @@ export default function Post({ author, content, publishedAt }) {
     setNewComment(event.target.value)
   }
 
-  function deleteComment(content) {
-    console.log(content)
+  function deleteComment(id) {
+    console.log(id)
+    setComments(comments.filter((_v, i) => i !== id))
   }
 
   return (
@@ -67,6 +68,7 @@ export default function Post({ author, content, publishedAt }) {
           return (
             <Comment
               key={i}
+              id={i}
               content={v}
               onDeleteComment={deleteComment}
             />
