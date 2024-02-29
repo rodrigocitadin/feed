@@ -57,9 +57,10 @@ export default function Post({ author, content, publishedAt }) {
           value={newComment}
           onChange={handleNewComment}
           placeholder='Write here...'
+          required
         />
         <footer>
-          <button type="submit">Send</button>
+          <button type="submit" disabled={!newComment.length}>Send</button>
         </footer>
       </form>
 
